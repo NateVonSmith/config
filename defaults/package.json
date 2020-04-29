@@ -1,13 +1,12 @@
 {
-    "name": "lofi-prettier-config",
+    "name": "lofi-defaults",
     "version": "1.0.1",
-    "description": "Prettier Config",
-    "main": "index.json",
-    "license": "MIT",
-    "keywords": [
-      "prettier",
-      "prettier-config"
+    "description": "App default files (.scss)",
+    "main": "index.js",
+    "files": [
+      "src/scss/*.scss"
     ],
+    "license": "MIT",
     "repository": {
       "type": "git",
       "url": "https://github.com/NateVonSmith/config"
