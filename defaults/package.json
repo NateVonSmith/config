@@ -1,9 +1,10 @@
 {
   "name": "lofi-defaults",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "App default files (.scss, .ts)",
   "prettier": "lofi-prettier-config",
-  "main": "index.js",
+  "main": "src/ts/index.js",
+  "types": "src/ts/index.d.ts",
   "scripts": {
     "deploy": "npm version patch && npm publish",
     "update-web": "cd ../../lofi-analytics/web && npm update lofi-defaults",
@@ -25,5 +26,6 @@
   "devDependencies": {
     "concurrently": "^5.2.0",
     "lofi-prettier-config": "^1.0.1"
-  }
+  },
+  "dependencies": {}
 }
