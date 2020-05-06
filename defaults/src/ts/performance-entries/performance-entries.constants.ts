@@ -1,6 +1,6 @@
-import { PerformanceEntryType, AllPerformanceEntries } from './performance-entries.interfaces';
+import { PerformanceEntryType, AllPerformanceEntries, PerformanceEntryTypes } from './performance-entries.interfaces';
 
-export const cleanObjectProperties = (dirtyObj, propKeys): any[] | object => {
+export const cleanObjectProperties = (dirtyObj, propKeys) => {
     const cleanSingleObj = (singleObj, _propKeys) => {
         const cleanObj = {};
         _propKeys.forEach((key) => singleObj && singleObj[key] !== undefined && (cleanObj[key] = singleObj[key]));
@@ -54,21 +54,21 @@ export const navigationProps: string[] = [
 
 export const paintProps: string[] = ['name', 'startTime', 'duration'];
 
-export const getEntries = (type: PerformanceEntryType, data?): any[] => {
+export const getEntries = (type: PerformanceEntryType) => {
     switch (type) {
         case PerformanceEntryType.RESOURCE:
-            return cleanObjectProperties(data || performance.getEntriesByType(PerformanceEntryType.RESOURCE), resourceProps) as any[];
+            return cleanObjectProperties(performance.getEntriesByType(PerformanceEntryType.RESOURCE), resourceProps);
         case PerformanceEntryType.NAVIGATION:
             return cleanObjectProperties(
-                data || performance.getEntriesByType(PerformanceEntryType.NAVIGATION)[0],
+                performance.getEntriesByType(PerformanceEntryType.NAVIGATION)[0],
                 navigationProps
-            ) as any[];
+            );
         case PerformanceEntryType.PAINT:
-            return cleanObjectProperties(data || performance.getEntriesByType(PerformanceEntryType.PAINT), paintProps) as any[];
+            return cleanObjectProperties(performance.getEntriesByType(PerformanceEntryType.PAINT), paintProps);
     }
 };
 
-export const getAllPerformanceEntries = (): AllPerformanceEntries  => {
+export const getAllPerformanceEntries = (): AllPerformanceEntries | any => {
     return {
         [PerformanceEntryType.RESOURCE]: getEntries(PerformanceEntryType.RESOURCE),
         [PerformanceEntryType.NAVIGATION]: getEntries(PerformanceEntryType.NAVIGATION),

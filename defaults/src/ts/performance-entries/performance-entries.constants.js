@@ -48,20 +48,14 @@ exports.navigationProps = [
     'loadEventStart'
 ];
 exports.paintProps = ['name', 'startTime', 'duration'];
-exports.getEntries = function (type, data) {
+exports.getEntries = function (type) {
     switch (type) {
         case performance_entries_interfaces_1.PerformanceEntryType.RESOURCE:
-            return exports.cleanObjectProperties(data || performance.getEntriesByType(performance_entries_interfaces_1.PerformanceEntryType.RESOURCE), exports.resourceProps);
-            as;
-            any[];
+            return exports.cleanObjectProperties(performance.getEntriesByType(performance_entries_interfaces_1.PerformanceEntryType.RESOURCE), exports.resourceProps);
         case performance_entries_interfaces_1.PerformanceEntryType.NAVIGATION:
-            return exports.cleanObjectProperties(data || performance.getEntriesByType(performance_entries_interfaces_1.PerformanceEntryType.NAVIGATION)[0], exports.navigationProps);
-            as;
-            any[];
+            return exports.cleanObjectProperties(performance.getEntriesByType(performance_entries_interfaces_1.PerformanceEntryType.NAVIGATION)[0], exports.navigationProps);
         case performance_entries_interfaces_1.PerformanceEntryType.PAINT:
-            return exports.cleanObjectProperties(data || performance.getEntriesByType(performance_entries_interfaces_1.PerformanceEntryType.PAINT), exports.paintProps);
-            as;
-            any[];
+            return exports.cleanObjectProperties(performance.getEntriesByType(performance_entries_interfaces_1.PerformanceEntryType.PAINT), exports.paintProps);
     }
 };
 exports.getAllPerformanceEntries = function () {
