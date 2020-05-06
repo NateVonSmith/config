@@ -4,7 +4,6 @@ export enum PerformanceEntryType {
     PAINT = 'paint'
 }
 
-
 export interface AllPerformanceEntries {
     [PerformanceEntryType.RESOURCE]: Resource[]
     [PerformanceEntryType.NAVIGATION]: Navigation[]
