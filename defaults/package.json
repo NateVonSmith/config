@@ -1,6 +1,6 @@
 {
   "name": "lofi-defaults",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "description": "App default files (.scss, .ts)",
   "prettier": "lofi-prettier-config",
   "main": "src/ts/index.js",
@@ -15,7 +15,9 @@
   "files": [
     "src/scss/*.scss",
     "src/ts/*.js",
-    "src/ts/**/*.js"
+    "src/ts/*.d.ts",
+    "src/ts/**/*.js",
+    "src/ts/**/*.d.ts"
   ],
   "license": "MIT",
   "repository": {
