@@ -1,6 +1,6 @@
 {
   "name": "lofi-defaults",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "App default files (.scss, .ts)",
   "prettier": "lofi-prettier-config",
   "main": "index.js",
