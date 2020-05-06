@@ -1,6 +1,6 @@
 {
   "name": "lofi-defaults",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "App default files (.scss, .ts)",
   "prettier": "lofi-prettier-config",
   "main": "src/ts/index.js",
@@ -13,9 +13,7 @@
     "postpublish": "concurrently \"npm run update-web\" \"npm run update-client\"  \"npm run commit\""
   },
   "files": [
-    "src/scss/*.scss",
-    "src/ts/*.ts",
-    "src/ts/**/*.ts"
+    "src/scss/*.scss"
   ],
   "license": "MIT",
   "repository": {
