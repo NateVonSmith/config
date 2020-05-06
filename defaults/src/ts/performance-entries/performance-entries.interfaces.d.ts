@@ -50,3 +50,4 @@ export interface Paint {
     startTime: number;
     duration: number;
 }
+export declare type PerformanceEntryTypes = Resource | Navigation | Paint;

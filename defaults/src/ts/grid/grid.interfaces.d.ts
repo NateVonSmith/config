@@ -21,7 +21,7 @@ export interface Sort {
     field: string;
     dir: SortDirection;
 }
-export declare enum FilterCombineLogic {
+export declare const enum FilterCombineLogic {
     AND,
     OR,
 }
