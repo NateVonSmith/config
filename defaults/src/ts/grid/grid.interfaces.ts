@@ -3,7 +3,7 @@ export interface Grid {
     data?: any[];
     columns: ColumnConfig[];
     sort?: Sort;
-    filter?: Filter[];
+    filters?: Filter[];
     limitTo?: number;
 }
 
@@ -19,6 +19,7 @@ export interface Filter {
     field: string;
     operator: FilterOperator;
     value: string | number | boolean;
+    options?: string[] | number[] | boolean[];
 }
 
 export interface Sort {
