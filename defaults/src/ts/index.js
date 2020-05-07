@@ -3,4 +3,5 @@ function __export(m) {
 }
 __export(require('./performance-entries/performance-entries.constants'));
 __export(require('./performance-entries/performance-entries.interfaces'));
+__export(require('./grid/grid.constants'));
 __export(require('./grid/grid.interfaces'));
