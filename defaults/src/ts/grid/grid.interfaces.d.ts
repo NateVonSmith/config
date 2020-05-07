@@ -2,7 +2,7 @@ export interface Grid {
     data?: any[];
     columns: ColumnConfig[];
     sort?: Sort;
-    filter?: Filter[];
+    filters?: Filter[];
     limitTo?: number;
 }
 export interface ColumnConfig {
@@ -16,12 +16,13 @@ export interface Filter {
     field: string;
     operator: FilterOperator;
     value: string | number | boolean;
+    options?: string[] | number[] | boolean[];
 }
 export interface Sort {
     field: string;
     dir: SortDirection;
 }
-export declare const enum FilterCombineLogic {
+export declare enum FilterCombineLogic {
     AND,
     OR,
 }
