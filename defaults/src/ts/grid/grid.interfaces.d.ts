@@ -1,4 +1,4 @@
-export interface Grid {
+export interface GridConfig {
     data?: any[];
     columns: ColumnConfig[];
     sort?: Sort;

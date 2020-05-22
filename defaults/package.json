@@ -1,11 +1,12 @@
 {
   "name": "lofi-defaults",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "description": "App default files (.scss, .ts)",
   "prettier": "lofi-prettier-config",
   "main": "src/ts/index.js",
   "types": "src/ts/index.d.ts",
   "scripts": {
+    "build": "npx tsc",
     "deploy": "npm version patch && npm publish",
     "update-web": "cd ../../lofi-analytics/web && npm update lofi-defaults",
     "update-client": "cd ../../lofi-analytics/client && npm update lofi-defaults",
