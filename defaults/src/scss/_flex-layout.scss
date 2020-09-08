@@ -391,3 +391,121 @@
         }
     }
 }
+
+
+.lofi-grid {
+    display: grid;
+    grid-auto-rows: minmax(auto, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+
+    &.lofi-grid-columns-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &.lofi-grid-columns-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &.lofi-grid-columns-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &.lofi-grid-columns-6 {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    &.lofi-gap-1 {
+        grid-gap: 1px;
+    }
+
+    &.lofi-gap-5 {
+        grid-gap: 5px;
+    }
+
+    &.lofi-gap-10 {
+        grid-gap: 10px;
+    }
+
+    &.lofi-gap-20 {
+        grid-gap: 20px;
+    }
+
+    @media (max-width: $widthDesktop) {
+        &.lofi-lt-md-grid-columns-1 {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &.lofi-lt-md-grid-columns-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &.lofi-lt-md-grid-columns-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &.lofi-lt-md-grid-columns-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    @media (max-width: $widthMobile) {
+        &.lofi-lt-sm-grid-columns-1 {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &.lofi-lt-sm-grid-columns-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &.lofi-lt-sm-grid-columns-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &.lofi-lt-sm-grid-columns-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+.lofi-grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-auto-rows: 1fr;
+
+    &::before {
+        content: '';
+        width: 0;
+        padding-bottom: 100%;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+    }
+
+    & > *:first-child {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+    }
+
+    &.lofi-gap-1 {
+        grid-gap: 1px;
+    }
+
+    &.lofi-gap-5 {
+        grid-gap: 5px;
+    }
+
+    &.lofi-gap-10 {
+        grid-gap: 10px;
+    }
+
+    &.lofi-gap-20 {
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: $widthMobile) {
+    .lofi-layout.lofi-lt-sm-column.lofi-space-evenly > * {
+        flex-grow: initial;
+        flex-basis: initial;
+    }
+}
