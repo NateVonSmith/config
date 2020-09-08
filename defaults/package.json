@@ -1,6 +1,6 @@
 {
   "name": "lofi-defaults",
-  "version": "1.0.35",
+  "version": "1.0.36",
   "description": "App default files (.scss, .ts)",
   "prettier": "lofi-prettier-config",
   "main": "src/ts/index.js",
@@ -13,7 +13,7 @@
     "update-listnto": "cd ../../listnto && npm update lofi-defaults",
     "update-myfineart": "cd ../../myfineart && npm update lofi-defaults",
     "commit": "git add . && git commit -m 'new version published' && git push origin master",
-    "postpublish": "concurrently \"npm run update-web\" \"npm run update-client\"  \"npm run commit\""
+    "postpublish": "concurrently \"npm run update-listnto\" \"npm run update-myfineart\"  \"npm run commit\""
   },
   "files": [
     "src/scss/*.scss",
