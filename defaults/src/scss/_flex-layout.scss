@@ -392,7 +392,6 @@
     }
 }
 
-
 .lofi-grid {
     display: grid;
     grid-auto-rows: minmax(auto, auto);
@@ -484,11 +483,13 @@
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 
-    &-auto, &-140 {
+    &-auto,
+    &-140 {
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     }
+}
 
-
+*[class*='lofi-grid-'] {
     &::before {
         content: '';
         width: 0;
