@@ -1,6 +1,6 @@
 {
   "name": "lofi-prettier-config",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Prettier Config",
   "main": "index.json",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "update-web": "cd ../../lofi-analytics/web && npm update lofi-defaults",
     "update-client": "cd ../../lofi-analytics/client && npm update lofi-defaults",
     "commit": "git add . && git commit -m 'new version published' && git push origin master",
-    "postpublish": "concurrently \"npm run update-web\" \"npm run update-client\"  \"npm run commit\""
+    "DISABLEDpostpublish": "concurrently \"npm run update-web\" \"npm run update-client\"  \"npm run commit\""
   },
   "keywords": [
     "prettier",
@@ -19,6 +19,5 @@
     "type": "git",
     "url": "https://github.com/NateVonSmith/config"
   },
-  "homepage": "https://github.com/NateVonSmith/config",
-  "dependencies": {}
+  "homepage": "https://github.com/NateVonSmith/config"
 }
